@@ -5,5 +5,6 @@ export const config = {
   bioauthStatusUrl: process.env.BIO_AUTH_URL || 'http://127.0.0.1:9933', // Default to local URL if environment variable is not set,
   validatorName: process.env.VALIDATOR_NAME || '',
   bioAuthVerificationUrl: process.env.BIO_AUTH_VERIFICATION_URL || '',
-  humanodeDir: (process.env.HUMANODE_DIR || '').replace('$HOME', process.env.HOME)
+  humanodeDir: (process.env.HUMANODE_DIR || '').replace('$HOME', process.env.HOME),
+  alwaysSendToTelegram: process.env.ALWAYS_SEND_TO_TELEGRAM || false
 }

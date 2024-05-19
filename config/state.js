@@ -24,7 +24,7 @@ const clearState = () => {
   Object.keys(state).forEach(key => delete state[key]);
 };
 
-module.exports = {
+export default {
   setState,
   getState,
   clearState

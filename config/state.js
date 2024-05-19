@@ -1,6 +1,6 @@
-const state = {};
+export const state = {};
 
-const setState = (key, value) => {
+export const setState = (key, value) => {
   const keys = key.split('.');
   let current = state;
   keys.slice(0, -1).forEach(k => {
@@ -10,7 +10,7 @@ const setState = (key, value) => {
   current[keys[keys.length - 1]] = value;
 };
 
-const getState = (key) => {
+export const getState = (key) => {
   const keys = key.split('.');
   let current = state;
   for (const k of keys) {
@@ -20,12 +20,6 @@ const getState = (key) => {
   return current;
 };
 
-const clearState = () => {
+export const clearState = () => {
   Object.keys(state).forEach(key => delete state[key]);
-};
-
-export default {
-  setState,
-  getState,
-  clearState
 };

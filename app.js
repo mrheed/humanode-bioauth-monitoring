@@ -13,7 +13,7 @@ async function main() {
 async function scheduleMain() {
   while (true) {
     await main();
-    await waitSeconds(60); // 3 hours
+    await waitSeconds(60); 
   }
 }
 
